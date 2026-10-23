@@ -1,0 +1,27 @@
+{
+  "name": "@lcp/bridge",
+  "license": "MIT",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "little-code-people": "./src/cli.ts"
+  },
+  "scripts": {
+    "dev": "tsx watch src/cli.ts --dev",
+    "start": "tsx src/cli.ts",
+    "typecheck": "tsc -p ."
+  },
+  "dependencies": {
+    "@lcp/game": "*",
+    "@lcp/protocol": "*",
+    "env-paths": "^4.0.0",
+    "open": "^11.0.4",
+    "sirv": "^3.0.2",
+    "tsx": "^4.23.15",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.2"
+  }
+}

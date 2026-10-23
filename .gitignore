@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.vite/
+coverage/
+playwright-report/
+test-results/
+*.log
+.DS_Store
+.env
+.env.*
+# never commit real transcripts; fixtures must be anonymised and live under packages/bridge/test/fixtures
+*.jsonl
+!packages/bridge/test/fixtures/**/*.jsonl
+.playwright-mcp/
+.wrangler/
+
+# private working notes; the public design doc is docs/DESIGN.md
+PLAN.md

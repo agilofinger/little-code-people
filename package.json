@@ -1,0 +1,40 @@
+{
+  "name": "little-code-people",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "description": "A C64-style house where your running Claude Code sessions live.",
+  "author": "agilofinger",
+  "homepage": "https://github.com/agilofinger/little-code-people#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agilofinger/little-code-people.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agilofinger/little-code-people/issues"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n bridge,game -c blue,magenta \"npm run dev -w @lcp/bridge\" \"npm run dev -w @lcp/game\"",
+    "build": "npm run build -w @lcp/game",
+    "start": "npm run build && npm run start -w @lcp/bridge -- --open",
+    "bridge": "npm run start -w @lcp/bridge --",
+    "deploy:cloudflare": "npm run build && npx --yes wrangler@4 deploy --config hosting/cloudflare/wrangler.jsonc",
+    "test": "vitest run",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "biome check .",
+    "format": "biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.2",
+    "@types/node": "^22.20.5",
+    "concurrently": "^10.0.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

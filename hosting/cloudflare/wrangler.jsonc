@@ -1,0 +1,10 @@
+// Optional: publishes the static game on Cloudflare Workers (static assets only, no server code).
+// Cloudflare never receives session data. Read hosting/README.md first.
+{
+  "name": "little-code-people",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    // Built by `npm run build`. Its _headers file sets the security policy.
+    "directory": "../../packages/game/dist"
+  }
+}
