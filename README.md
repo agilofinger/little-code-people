@@ -5,6 +5,8 @@ person. They walk around, work at the computer or the typewriter, knock on the g
 you, type you letters, send each other envelopes, ring the bell when they arrive and calmly leave
 when they close.
 
+![The demo house: little people at the TV, the computers, the bathroom sink and the kitchen; one of them has typed a letter, and a FULL sign hangs on the front door.](docs/screenshot.png)
+
 An homage to _Little Computer People_ (Activision, 1985). Everything here is original: the pixel
 art, the tunes and the font.
 
